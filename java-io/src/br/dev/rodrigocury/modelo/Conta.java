@@ -1,5 +1,6 @@
 package br.dev.rodrigocury.modelo;
 
+import java.io.Serializable;
 import java.util.Locale;
 
 /**
@@ -8,7 +9,7 @@ import java.util.Locale;
  *
  */
 
-public abstract class Conta implements Comparable<Conta>{
+public abstract class Conta implements Comparable<Conta>, Serializable{
 
 	protected double saldo;
 	private int agencia;
