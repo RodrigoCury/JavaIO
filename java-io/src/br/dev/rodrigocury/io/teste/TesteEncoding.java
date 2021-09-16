@@ -12,14 +12,13 @@ public class TesteEncoding {
 		print(string);
 
 		String s = "À";
-		print(s);
+		print(s, 0);
 
 	}
 
 	private static void print(String c) {
 		print(c, 0);
 	}
-
 	private static void print(String c, int i) {
 		List<String> aStrings = Arrays.asList(StandardCharsets.ISO_8859_1.displayName(),
 				StandardCharsets.US_ASCII.displayName(), StandardCharsets.UTF_16.displayName(),
@@ -33,8 +32,8 @@ public class TesteEncoding {
 
 				String s = new String(bytes, string);
 
-				System.out.println(String.format("%s at: %03d - é %s com %d Byte%s usando %s", c, c.codePointAt(i), s,
-						bytes.length, bytes.length > 1 ? "s" : " ", string));
+				System.out.printf("%s at: %03d - é %s com %d Byte%s usando %s%n", c, c.codePointAt(i), s,
+						bytes.length, bytes.length > 1 ? "s" : " ", string);
 			} catch (UnsupportedEncodingException e) {
 				// TODO Auto-generated catch block
 				System.out.println(string + "Não é suportada");

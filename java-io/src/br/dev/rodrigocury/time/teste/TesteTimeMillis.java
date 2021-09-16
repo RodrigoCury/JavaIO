@@ -20,6 +20,9 @@ public class TesteTimeMillis {
 
 		long fim = System.currentTimeMillis();
 
+		Integer integer = new Integer(1);
+
+
 		System.out.println("Passaram " + (((double) (fim - ini)) / 1000) + " segundos");
 
 	}
